@@ -21,6 +21,7 @@ body {
   background-color: #0c0c0c;
   color: #e9e9e9;
   font-family: Juan;
+  overflow-x: hidden;
 }
 
 /* #main {
@@ -39,6 +40,11 @@ body {
   align-items: flex-end;
   padding-bottom: 10px;
   position: fixed;
+  z-index: 88;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 #brand-name {
@@ -140,4 +146,9 @@ body {
 #statistics-dashboard h2 {
   font-family: "montserat-black";
   font-weight: 200;
+}
+
+#page-2 {
+  height: 100vh;
+  width: 100vw;
 }
