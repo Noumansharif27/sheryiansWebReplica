@@ -256,10 +256,9 @@ button {
 }
 
 #page-2 {
-  height: 200vh;
+  height: 150vh;
   width: 100vw;
-  padding: 0;
-  /* background-color: yellowgreen; */
+  background-color: yellowgreen;
   /* box-sizing: c; */
 }
 
