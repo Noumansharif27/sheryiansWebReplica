@@ -177,7 +177,7 @@ body {
   font-size: 0.9rem;
 }
 
-#main section {
+#main #home {
   height: 100vh;
   width: 100vw;
   /* background-color: gray; */
@@ -255,11 +255,13 @@ button {
   letter-spacing: -1px;
 }
 
-#page-2 {
-  height: 150vh;
+#main #page-2 {
+  height: 160vh;
   width: 100vw;
-  background-color: yellowgreen;
-  /* box-sizing: c; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #page-2-main-heading {
@@ -272,6 +274,11 @@ button {
   margin-bottom: 3.5rem;
 }
 
+#main #page-2 button {
+  width: 15rem;
+  font-weight: 500;
+}
+
 #page-2-main-heading span {
   color: #24cfa6;
 }
@@ -280,13 +287,202 @@ button {
   border-radius: 10px;
 }
 
-#main #page-2 button {
-  width: 15rem;
-  font-weight: 500;
+#main #page-3 {
+  height: 150vh;
+  width: 100vw;
+  text-align: left;
+  padding: 5rem 4rem 0 4rem;
 }
 
-#page-3 {
-  height: 100vh;
-  width: 100vw;
-  background-color: pink;
+#main #page-3 #headline {
+  font-size: 2.5rem;
+  font-family: "RobotoMono-extraLight";
+  letter-spacing: -3px;
+}
+
+#courses-cards {
+  margin-top: 3rem;
+  height: 75%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+#main .course-card {
+  height: 90%;
+  width: 31%;
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.course-card .card-header {
+  width: 100%;
+  height: 35%;
+  margin-bottom: 1.5rem;
+}
+
+.course-card .card-header img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card-main .card-heading {
+  font-size: 1.2rem;
+  font-family: "RobotoMono-extraLight";
+  letter-spacing: -1px;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-main .card-details {
+  font-size: 0.85rem;
+  font-family: "RobotoMono-extraLight";
+  letter-spacing: -1.5px;
+  padding-left: 1.5rem;
+  opacity: 0.8;
+}
+
+.card-main .details-line {
+  /* background-color: pink; */
+  height: 2rem;
+  width: 90%;
+  border-bottom: 1px solid #4f4f4f;
+  margin: auto;
+}
+
+.card-main .course-features {
+  /* height: 50%; */
+  width: 100%;
+  padding: 1.5rem 0 0 2.5rem;
+}
+
+.course-features .webD {
+  background-color: #121212;
+  padding: 0.5rem;
+  width: 35%;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  margin-right: 1rem;
+}
+
+.course-features .anim {
+  background-color: #121212;
+  padding: 0.5rem;
+  width: 25%;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.course-features .design {
+  background-color: #121212;
+  padding: 0.5rem;
+  width: 25%;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card-main .tutor-pricing {
+  width: 100%;
+  height: 4rem;
+  background-color: #121212;
+  margin-top: 2.2rem;
+  text-align: left;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tutor-pricing h3 span {
+  opacity: 0.7;
+  font-size: 0.89rem;
+  font-family: "RobotoMono-extraLight";
+}
+
+.tutor-pricing h3 {
+  font-size: 1rem;
+  font-family: "RobotoMono-extraLight";
+}
+
+.purchase-btn {
+  width: 100%;
+  height: 3rem;
+  background-color: #24cfa6;
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* text-align: center; */
+  border-radius: 50%;
+  font-family: "RobotoMono-SemiBold";
+}
+
+.course-features .lgc {
+  background-color: #121212;
+  padding: 0.5rem;
+  width: 35%;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  margin-right: 1rem;
+}
+
+.card-main .bknd-details-line {
+  /* background-color: pink; */
+  height: 5rem;
+  width: 90%;
+  border-bottom: 1px solid #4f4f4f;
+  margin: auto;
+}
+
+.course-card .bknd-tp {
+  margin-top: 1rem;
+}
+
+.course-features .apt {
+  background-color: #121212;
+  padding: 0.5rem;
+  width: 25%;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.course-features .rsng {
+  background-color: #121212;
+  padding: 0.5rem;
+  width: 30%;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.course-card .apt-tp {
+  margin-top: 1rem;
+}
+
+.card-main .apt-details-line {
+  /* background-color: pink; */
+  height: 5rem;
+  width: 90%;
+  border-bottom: 1px solid #4f4f4f;
+  margin: auto;
 }
