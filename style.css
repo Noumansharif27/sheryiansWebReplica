@@ -83,8 +83,7 @@ body {
   backdrop-filter: blur(10px);
   transform-origin: 0% 50%;
   transform: rotate(50deg);
-  box-shadow: 20px 80px 20px 70px #24cfa6aa;
-  box-shadow: 20px 80px 00px 70px #24cfa776;
+  box-shadow: 20px 80px 90px 70px #24cfa776;
   position: absolute;
   top: -20rem;
   left: 35%;
@@ -98,7 +97,7 @@ body {
   background-color: #24cfa676;
   backdrop-filter: blur(10px);
   transform: rotate(-50deg);
-  box-shadow: 20px 80px 00px 70px #24cfa776;
+  box-shadow: 20px 80px 90px 70px #24cfa776;
   position: absolute;
   top: -8rem;
   right: 35%;
@@ -114,11 +113,11 @@ body {
 }
 
 #sm-circle {
-  height: 15rem;
-  width: 15rem;
+  height: 5rem;
+  width: 5rem;
   background-color: #24cfa74f;
   border-radius: 50%;
-  box-shadow: 10px 10px 10px 20px #24cfa74f;
+  box-shadow: 10px 10px 90px 80px #24cfa74f;
 }
 
 #main {
