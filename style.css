@@ -305,21 +305,25 @@ button {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  position: relative;
+  /* position: relative; */
 }
 
 #main .course-card {
-  height: 90%;
+  height: 81%;
   width: 31%;
-  background-color: #1e1e1e;
+  /* background-color: #1e1e1e; */
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
+  background-color: pink;
+  z-index: 14;
 }
 
 .course-card .card-header {
   width: 100%;
   height: 35%;
   margin-bottom: 1.5rem;
+  position: relative;
 }
 
 .course-card .card-header img {
@@ -418,12 +422,13 @@ button {
   height: 3rem;
   background-color: #24cfa6;
   position: absolute;
-  bottom: -1.5rem;
+  bottom: -3em;
   left: 50%;
   transform: translate(-50%, -50%);
   /* text-align: center; */
   border-radius: 50%;
   font-family: "RobotoMono-SemiBold";
+  z-index: 88;
 }
 
 .course-features .lgc {
@@ -484,4 +489,10 @@ button {
   width: 90%;
   border-bottom: 1px solid #4f4f4f;
   margin: auto;
+}
+
+.course-card .card-header .fbutton {
+  height: 2rem;
+  width: 3rem;
+  background-color: #e9e9e9;
 }
