@@ -1,11 +1,46 @@
 @font-face {
-  font-family: "montserat-black";
+  font-family: "RobotoMono-extraLight";
+  src: url(./fonts/RobotoMono-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "RobotoMono-extraLight-italic";
+  src: url(./fonts/RobotoMono-ExtraLightItalic.ttf);
+}
+
+@font-face {
+  font-family: "RobotoMono-Medium";
+  src: url(./fonts/RobotoMono-Medium.ttf);
+}
+
+@font-face {
+  font-family: "RobotoMono-Regular";
+  src: url(./fonts/RobotoMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: "RobotoMono-SemiBold";
+  src: url(./fonts/RobotoMono-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "RobotoMono-Bold";
+  src: url(./fonts/RobotoMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: "RobotoMono-BoldItalic";
+  src: url(./fonts/RobotoMono-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: "Montserrat-Black";
   src: url(./fonts/Montserrat-Black.ttf);
 }
 
 @font-face {
-  font-family: "montserat-italic";
-  src: url(./fonts/Montserrat-BlackItalic.ttf);
+  font-family: "Montserrat-SemiBold";
+  src: url(./fonts/Montserrat-SemiBold.ttf);
 }
 
 * {
@@ -22,29 +57,74 @@ body {
   color: #e9e9e9;
   font-family: Juan;
   overflow-x: hidden;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#layer {
+  height: 800vh;
+  width: 100vw;
+  /* position: absolute; */
+}
+
+#capsules {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  background-color: #ba5050;
+}
+
+#layer #capsule-1 {
+  height: 20rem;
+  width: 10rem;
+  background-color: #24cfa6;
+  backdrop-filter: blur(10px);
+  transform: rotate(30deg);
+  box-shadow: 20px 80px 50px 70px #24cfa6aa;
+  position: absolute;
+  top: -150px;
+  left: 30%;
+  transform: translate(-50, 0);
+}
+
+#layer #capsule-2 {
+  height: 15rem;
+  width: 10rem;
+  background-color: #24cfa6;
+  backdrop-filter: blur(10px);
+  transform: rotate(-30deg);
+  box-shadow: 20px 80px 00px 70px #24cfa6aa;
+  position: absolute;
+  top: -80px;
+  right: 30%;
+  transform: translate(-50, 0);
+}
+
+#circle {
+  height: 40vh;
+  width: 100%;
+  background-color: blue;
 }
 
 /* #main {
-  height: 100%;
-  width: 100%;
-  background-color: aqua;
+  background-color: #0c0c0c;
+  backdrop-filter: blur(50px);
 } */
 
 #nav {
   height: 9vh;
   width: 100vw;
   background-color: #24232300;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding-bottom: 10px;
   position: fixed;
   z-index: 88;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 #brand-name {
@@ -55,6 +135,7 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+  font-family: "RobotoMono-Regular";
 }
 
 #brand-name img {
@@ -67,7 +148,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   gap: 2.5rem;
-  font-family: "Juan";
+  font-family: "RobotoMono-Regular";
   padding-right: 5.5rem;
 }
 
@@ -97,15 +178,22 @@ body {
   font-size: 5rem;
   text-align: center;
   line-height: 4.3rem;
+  font-family: "RobotoMono-extraLight";
+  font-weight: 100;
+  letter-spacing: -5px;
 }
 
 #main section h1 span {
   color: #24cfa6;
-  font-family: "montserat-italic";
+  font-family: "RobotoMono-extraLight";
   /* font-weight: 100; */
 }
 
-#main section button {
+button {
+  background-color: #24cfa6;
+}
+
+#main button {
   height: 2.8rem;
   width: 22.5rem;
   border-radius: 0.325rem;
@@ -127,6 +215,7 @@ body {
   right: 13%;
   font-size: 0.85rem;
   opacity: 0.8;
+  text-align: left;
 }
 
 #main #floating-text span {
@@ -139,16 +228,54 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 10rem;
-  margin-top: 5rem;
+  gap: 7rem;
+  margin: 4rem 0;
 }
 
 #statistics-dashboard h2 {
-  font-family: "montserat-black";
-  font-weight: 200;
+  font-family: "Montserrat-Black";
+  line-height: 20px;
+  /* font-weight: 100; */
+}
+
+#statistics-dashboard h3 {
+  font-family: "RobotoMono-extraLight";
+  letter-spacing: -1px;
 }
 
 #page-2 {
+  height: 200vh;
+  width: 100vw;
+  padding: 0;
+  background-color: yellowgreen;
+  /* box-sizing: c; */
+}
+
+#page-2-main-heading {
+  font-size: 3.5rem;
+  text-align: center;
+  line-height: 4.3rem;
+  font-family: "RobotoMono-extraLight";
+  font-weight: 100;
+  letter-spacing: -5px;
+  margin-bottom: 3.5rem;
+}
+
+#page-2-main-heading span {
+  color: #24cfa6;
+}
+
+#page-2 img {
+  border-radius: 10px;
+}
+
+#main #page-2 button {
+  width: 15rem;
+  font-weight: 500;
+}
+
+#page-3 {
   height: 100vh;
   width: 100vw;
+  background-color: pink;
 }
