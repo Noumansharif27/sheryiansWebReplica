@@ -167,7 +167,7 @@ body {
   font-size: 0.85rem;
 }
 
-#sign-in {
+#body #sign-in {
   height: 2rem;
   width: 5.5rem;
   border-radius: 0.25rem;
@@ -200,11 +200,7 @@ body {
   /* font-weight: 100; */
 }
 
-button {
-  background-color: #24cfa6;
-}
-
-#main button {
+#home button {
   height: 2.8rem;
   width: 22.5rem;
   border-radius: 0.325rem;
@@ -214,6 +210,7 @@ button {
   font-size: 1.25rem;
   font-weight: 540;
   color: #0c0c0c;
+  z-index: 99;
 }
 
 #main section button span {
@@ -255,7 +252,7 @@ button {
 }
 
 #main #page-2 {
-  height: 160vh;
+  height: 130vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -266,7 +263,7 @@ button {
 #page-2-main-heading {
   font-size: 2.5rem;
   text-align: center;
-  line-height: 4.3rem;
+  line-height: 2.8rem;
   font-family: "RobotoMono-extraLight";
   font-weight: 100;
   letter-spacing: -5px;
@@ -275,14 +272,27 @@ button {
 
 #main #page-2 button {
   width: 15rem;
-  font-weight: 500;
+  height: 2.8rem;
+  border-radius: 0.325rem;
+  background-color: #24cfa6;
+  border: none;
+  margin-top: 4rem;
+  font-size: 1.25rem;
+  font-weight: 540;
+  color: #0c0c0c;
+  z-index: 99;
 }
 
 #page-2-main-heading span {
   color: #24cfa6;
 }
 
-#page-2 img {
+#page-2 #video {
+  height: 65%;
+  width: 70%;
+  background-image: url(./images/maxresdefault.jpg);
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
 }
 
@@ -301,22 +311,25 @@ button {
 
 #courses-cards {
   margin-top: 3rem;
-  height: 75%;
+  height: 80%;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  /* position: relative; */
+  justify-content: space-between;
+}
+
+#main .card {
+  height: 100%;
+  width: 32%;
+  position: relative;
 }
 
 #main .course-card {
-  height: 81%;
-  width: 31%;
-  /* background-color: #1e1e1e; */
+  height: 85%;
+  width: 100%;
+  background-color: #1e1e1e;
   border-radius: 20px;
   overflow: hidden;
-  position: relative;
-  background-color: pink;
-  z-index: 14;
+  z-index: 1;
 }
 
 .course-card .card-header {
@@ -404,6 +417,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 55;
+  position: relative;
 }
 
 .tutor-pricing h3 span {
@@ -422,13 +437,15 @@ button {
   height: 3rem;
   background-color: #24cfa6;
   position: absolute;
-  bottom: -3em;
+  bottom: 0.5rem;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* text-align: center; */
-  border-radius: 50%;
+  border-radius: 10px;
   font-family: "RobotoMono-SemiBold";
+  font-size: 1.6rem;
   z-index: 88;
+  border: none;
+  letter-spacing: -2px;
 }
 
 .course-features .lgc {
@@ -495,4 +512,132 @@ button {
   height: 2rem;
   width: 3rem;
   background-color: #e9e9e9;
+}
+
+#main #page-4 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+
+#page-4 h2 {
+  font-size: 3rem;
+  text-align: center;
+  line-height: 3.5rem;
+  font-family: "RobotoMono-extraLight";
+  font-weight: 100;
+  letter-spacing: -5px;
+  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+}
+
+#page-4 h2 span {
+  color: #24cfa6;
+}
+
+#page-4 #companies-logos {
+  width: 70%;
+  height: 50%;
+  background-color: green;
+  margin-bottom: 3rem;
+}
+
+#page-4 button {
+  width: 14.5rem;
+  height: 3.5rem;
+  background-color: #24cfa6;
+  border-radius: 10px;
+  font-family: "RobotoMono-Medium";
+  font-size: 1.25rem;
+  border: none;
+  letter-spacing: -2px;
+}
+
+footer {
+  height: 95vh;
+  width: 100vw;
+  position: relative;
+}
+
+footer #footer-content {
+  height: 70%;
+  width: 95%;
+  /* background-color: green; */
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-top: 1px solid #4f4f4f;
+  border-bottom: 1px solid #4f4f4f;
+  padding-left: 2.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#footer-content #brand-slogan {
+  width: 35%;
+  margin-top: 6.5rem;
+}
+
+#footer-content #brand-slogan img {
+  height: 3.5rem;
+}
+
+#footer-content #brand-slogan h3 {
+  font-size: 0.89rem;
+  opacity: 0.9;
+  font-weight: 500;
+  margin-top: 1rem;
+  cursor: default;
+}
+
+#links-info {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5.5rem;
+}
+
+#footer-content a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.879rem;
+}
+
+#footer-content a:hover {
+  color: #24cfa6;
+}
+
+#footer-content #company-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+#footer-content #communities-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+#footer-content #owner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+footer #footer-content #links-info h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  cursor: default;
+}
+
+footer #footer-content #links-info #address {
+  width: 10rem;
 }
