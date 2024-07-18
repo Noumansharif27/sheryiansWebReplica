@@ -553,8 +553,14 @@ body {
 #page-4 #companies-logos {
   width: 70%;
   height: 50%;
-  background-color: green;
+  /* background-color: green; */
   margin-bottom: 3rem;
+  text-align: center;
+}
+
+#page-4 #companies-logos img {
+  height: 9rem;
+  padding-right: 1rem;
 }
 
 #page-4 button {
