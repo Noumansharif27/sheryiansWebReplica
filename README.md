@@ -27,6 +27,6 @@ This project is not currently intended for external contributions. However, feel
 
 - Reach out to me via email: [Email](noumansharifgul@gmail.com)
 - Find me on social media:
-  - Facebook: [Linkedin](https://linkedin.com/in/Nouman Sharif)
+  - Facebook: [Linkedin](https://linkedin.com/in/Nouman-Sharif)
   - Twitter: [Instagram](https://instagram.com/Nouman_sharifgul)
-  - Threads: [threads] (https://www.threads.net/)
+  - Threads: [threads](https://www.threads.net/)
