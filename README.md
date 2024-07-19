@@ -25,10 +25,8 @@
 
 This project is not currently intended for external contributions. However, feel free to fork the repository and create your own version!
 
-**Contact:**
-
-<a href="https://github.com/Noumansharif27/"><i class="ri-github-fill"></i></a>
-<a href="https://instagram.com/Nouman_sharifgul"><i class="ri-instagram-fill"></i></a>
-<a href="https://linkedin.com/in/Nouman Sharif "><i class="ri-linkedin-box-fill"></i></a>
-<a href="https://discord.com/channels/@me"><i class="ri-discord-fill"></i ></a>
-<a href="https://www.threads.net/"><i class="ri-threads-fill"></i></a>
+- Reach out to me via email: [Email](noumansharifgul@gmail.com)
+- Find me on social media:
+  - Facebook: [Linkedin](https://linkedin.com/in/Nouman Sharif)
+  - Twitter: [Instagram](https://instagram.com/Nouman_sharifgul)
+  - Threads: [threads] (https://www.threads.net/)
