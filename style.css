@@ -1,21 +1,21 @@
 @font-face {
-  font-family: "RobotoMono-extraLight";
-  src: url(./fonts/RobotoMono-ExtraLight.ttf);
+  font-family: "NeueMachina-Light";
+  src: url(./fonts/NeueMachina-Light_gwWCZxVuQl.ttf);
 }
 
 @font-face {
   font-family: "RobotoMono-extraLight-italic";
-  src: url(./fonts/RobotoMono-ExtraLightItalic.ttf);
+  src: url(./fonts/NeueMachina-Regular_DQCmjH1st.ttf);
 }
 
 @font-face {
-  font-family: "RobotoMono-Medium";
-  src: url(./fonts/RobotoMono-Medium.ttf);
+  font-family: "juana-extralightit";
+  src: url(./fonts/Fontspring-DEMO-juana-extralightit_toKzXEsfr.ttf);
 }
 
 @font-face {
-  font-family: "RobotoMono-Regular";
-  src: url(./fonts/RobotoMono-Regular.ttf);
+  font-family: "Helvetica-Regular";
+  src: url(./fonts/HelveticaNowDisplay-Regular_5Mzhp8KlA8_CAVTbnsPOM.woff2);
 }
 
 @font-face {
@@ -84,9 +84,11 @@ body {
   --border-radius-50: 50%;
 
   --font-weight: 100;
-  --font-family-extra-light: "RobotoMono-extraLight";
-  --font-family-regular: "RobotoMono-Regular";
+  --font-family-extra-light: "NeueMachina-Light";
+  --font-family-regular: "NeueMachina-Regular";
   --footer-links-gap: 0.8rem;
+
+  --primary-font-family-regular: "Helvetica-Regular";
 
   --cursor-default: default;
 
@@ -95,17 +97,17 @@ body {
 }
 
 .light {
-  --light-secondary-color: #479986;
-  --light-shadow-color: #479986;
-  --light-bg-color: #ffffff;
-  --universal-dark-bg-color: #e9e9e9;
+  --dark-secondary-color: #479986;
+  --dark-shadow-color: #479986;
+  --dark-bg-color: #ffffffaf;
+  --universal-dark-bg-color: #e9e9e9bb;
 
-  --light-button-color: #ffffff;
-  --light-card-bg-color: #f4f4f4;
+  --dark-button-color: #ffffff;
+  --dark-card-bg-color: #f4f4f4;
   --dark-card-feature-el-bg-color: #dbdbdb;
-  --light-nav-bg-color: #e9e9e986;
-  --light-details-line-bg-color: #4f4f4f;
-  --light-text-color: #0c0c0c;
+  --dark-nav-bg-color: #ffffff00;
+  --dark-details-line-bg-color: #4f4f4f;
+  --dark-text-color: #0c0c0c;
 }
 
 button {
@@ -205,7 +207,7 @@ button {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-family: var(--font-family-regular);
+  font-family: var(--font-family-extra-light);
 }
 
 #brand-name img {
@@ -218,7 +220,8 @@ button {
   justify-content: flex-end;
   align-items: center;
   gap: 2.5rem;
-  font-family: var(--font-family-regular);
+  font-family: var(--font-family-extra-light);
+  font-weight: var(--font-weight);
   padding-right: 5.5rem;
 }
 
@@ -247,27 +250,34 @@ button {
   text-align: center;
   line-height: 4.3rem;
   font-family: var(--font-family-extra-light);
-  font-weight: var(--font-weight);
-  letter-spacing: -5px;
+  font-weight: 100;
+  color: var(--dark-text-color);
 }
 
-#home h1 span {
+#main #home h1 span {
   color: var(--dark-secondary-color);
   font-family: var(--font-family-extra-light);
+}
+
+#main #home #span-1 {
+  /* color: var(--dark-secondary-color); */
+  /* font-family: var(--font-family-extra-light); */
+  font-family: juana-extralightit;
+  color: var(--dark-text-color);
 }
 
 #home button {
   height: 2.8rem;
   width: 22.5rem;
-  border-radius: var(--pg-button-radius);
+  border-radius: 10px;
   background-color: var(--dark-secondary-color);
   margin-top: var(--margin-top);
-  font-size: 1.25rem;
-  font-weight: 540;
+  font-size: 1.3rem;
+  font-weight: 590;
+  font-family: var(--primary-font-family-regular);
 }
 
 #home button span {
-  font-weight: 545;
 }
 
 #floating-text {
@@ -277,6 +287,7 @@ button {
   font-size: 0.85rem;
   opacity: 0.8;
   text-align: left;
+  font-family: var(--primary-font-family-regular);
 }
 
 #floating-text span {
@@ -291,20 +302,24 @@ button {
   align-items: flex-end;
   gap: 7rem;
   margin: var(--margin-top) 0;
+  font-family: var(--primary-font-family-regular);
 }
 
 #statistics-dashboard h2 {
-  font-family: "Montserrat-Black";
+  /* font-family: "Montserrat-Black"; */
+  font-weight: 900;
   line-height: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
 #statistics-dashboard h3 {
   font-family: var(--font-family-extra-light);
-  letter-spacing: -1px;
+  font-weight: 100;
 }
 
 #main #page-2 {
-  height: 130vh;
+  height: 150vh;
   width: var(--pg-width);
   display: flex;
   flex-direction: column;
@@ -317,8 +332,7 @@ button {
   text-align: center;
   line-height: 2.8rem;
   font-family: var(--font-family-extra-light);
-  font-weight: var(--font-weight);
-  letter-spacing: -5px;
+  font-weight: 500;
   margin-bottom: 3.5rem;
 }
 
@@ -337,25 +351,26 @@ button {
 }
 
 #page-2 #video {
-  height: 65%;
-  width: 70%;
+  height: 60%;
+  width: 65%;
   background-image: url(./images/maxresdefault.jpg);
   background-position: center;
   background-size: cover;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 #main #page-3 {
   height: 150vh;
   width: var(--pg-width);
   text-align: left;
-  padding: 5rem 4rem 0 4rem;
+  padding: 5rem 4rem 0 3.8rem;
 }
 
 #main #page-3 #headline {
   font-size: 2.5rem;
   font-family: var(--font-family-extra-light);
-  letter-spacing: -3px;
+  letter-spacing: 1px;
+  font-weight: 100;
 }
 
 #courses-cards {
@@ -376,7 +391,6 @@ button {
 #main .course-card {
   height: 85%;
   width: var(--pg-child-width);
-  background-color: var(--dark-card-bg-color);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -396,19 +410,20 @@ button {
 }
 
 .card-main .card-heading {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   font-family: var(--font-family-extra-light);
-  letter-spacing: -1px;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
+  line-height: 1.45rem;
+  font-weight: 100;
 }
 
 .card-main .card-details {
   font-size: 0.85rem;
   font-family: var(--font-family-extra-light);
-  letter-spacing: -1.5px;
   padding-left: 1.5rem;
-  opacity: 0.8;
+  opacity: 0.6;
+  line-height: 1.25rem;
 }
 
 .card-main .details-line {
@@ -421,24 +436,26 @@ button {
 .card-main .course-features {
   width: var(--pg-child-width);
   padding: 1.5rem 0 0 2.5rem;
+  font-family: var(--font-family-extra-light);
 }
 
 .course-features .webD {
   background-color: var(--dark-card-feature-el-bg-color);
-  padding: 0.5rem;
-  width: 35%;
+  padding: 0.79rem 0.5rem;
+  width: 40%;
   font-size: 0.85rem;
   border-radius: 5px;
   text-align: center;
   display: inline-block;
   margin-bottom: var(--margin-bottom);
   margin-right: 1rem;
+  color: var(--dark-text-color);
 }
 
 .course-features .anim {
   background-color: var(--dark-card-feature-el-bg-color);
-  padding: 0.5rem;
-  width: 25%;
+  padding: 0.7rem 0.5rem;
+  width: 30%;
   font-size: 0.85rem;
   border-radius: 5px;
   text-align: center;
@@ -447,11 +464,11 @@ button {
 
 .course-features .design {
   background-color: var(--dark-card-feature-el-bg-color);
-  padding: 0.5rem;
-  width: 25%;
+  width: 30%;
   font-size: 0.85rem;
   border-radius: 5px;
   text-align: center;
+  padding: 0.7rem 0.5rem;
 }
 
 .card-main .tutor-pricing {
@@ -468,7 +485,7 @@ button {
 }
 
 .tutor-pricing h3 span {
-  opacity: 0.7;
+  opacity: 0.6;
   font-size: 0.89rem;
   font-family: var(--font-family-extra-light);
 }
@@ -476,6 +493,9 @@ button {
 .tutor-pricing h3 {
   font-size: 1rem;
   font-family: var(--font-family-extra-light);
+  font-weight: var(--font-weight);
+  color: var(--dark-text-color);
+  opacity: 1;
 }
 
 .purchase-btn {
@@ -487,16 +507,16 @@ button {
   left: var(--border-radius-50);
   transform: translate(-50%, -50%);
   border-radius: 10px;
-  font-family: "RobotoMono-SemiBold";
-  font-size: 1.6rem;
-  letter-spacing: -2px;
+  font-family: "Helvetica-Regular";
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .course-features .lgc {
   background-color: var(--dark-card-feature-el-bg-color);
-  padding: 0.5rem;
-  width: 35%;
-  font-size: 0.95rem;
+  padding: 0.79rem 0.5rem;
+  width: 40%;
+  font-size: 0.85rem;
   border-radius: 5px;
   text-align: center;
   display: inline-block;
@@ -517,9 +537,9 @@ button {
 
 .course-features .apt {
   background-color: var(--dark-card-feature-el-bg-color);
-  padding: 0.5rem;
-  width: 25%;
-  font-size: 1rem;
+  padding: 0.7rem 0.5rem;
+  width: 30%;
+  font-size: 0.85rem;
   border-radius: 5px;
   text-align: center;
   margin-bottom: var(--margin-bottom);
@@ -529,9 +549,9 @@ button {
 
 .course-features .rsng {
   background-color: var(--dark-card-feature-el-bg-color);
-  padding: 0.5rem;
+  padding: 0.7rem 0.5rem;
   width: 30%;
-  font-size: 1rem;
+  font-size: 0.85rem;
   border-radius: 5px;
   text-align: center;
   margin-bottom: var(--margin-bottom);
@@ -565,12 +585,11 @@ button {
 }
 
 #page-4 h2 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-align: center;
   line-height: 3.5rem;
   font-family: var(--font-family-extra-light);
   font-weight: var(--font-weight);
-  letter-spacing: -5px;
   margin-bottom: 3.5rem;
   margin-top: 2rem;
 }
@@ -592,13 +611,13 @@ button {
 }
 
 #page-4 button {
-  width: 14.5rem;
+  width: 15rem;
   height: 3.5rem;
   background-color: var(--dark-secondary-color);
   border-radius: 10px;
-  font-family: "RobotoMono-Medium";
-  font-size: 1.25rem;
-  letter-spacing: -2px;
+  /* font-family: "RobotoMono-Medium"; */
+  font-size: 1.5rem;
+  font-weight: 540;
 }
 
 footer {
