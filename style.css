@@ -133,30 +133,30 @@ button {
 }
 
 #capsule-1 {
-  height: 25rem;
-  width: 10rem;
+  height: 60%;
+  width: 12%;
   background-color: var(--dark-shadow-color);
   backdrop-filter: blur(10px);
   transform-origin: 0% 50%;
   transform: rotate(50deg);
   box-shadow: 20px 80px 90px 70px var(--dark-shadow-color);
   position: absolute;
-  top: -20rem;
+  top: -50%;
   left: 35%;
   transform: translate(-50, 0);
   border-radius: 0 0 var(--border-radius-50) var(--border-radius-50);
 }
 
 #capsule-2 {
-  height: 15rem;
-  width: 5rem;
+  height: 45%;
+  width: 10%;
   background-color: var(--dark-shadow-color);
   backdrop-filter: blur(10px);
   transform: rotate(-50deg);
   box-shadow: 20px 80px 90px 70px var(--dark-shadow-color);
   position: absolute;
-  top: -8rem;
-  right: 35%;
+  top: -20%;
+  right: 40%;
   transform: translate(-50, 0);
   border-radius: 0 0 var(--border-radius-50) var(--border-radius-50);
 }
@@ -176,8 +176,8 @@ button {
 }
 
 #half-ball {
-  height: 25rem;
-  width: 25rem;
+  height: 9.5%;
+  width: 24.5%;
   background-color: var(--dark-shadow-color);
   position: absolute;
   bottom: 50rem;
@@ -248,13 +248,15 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
+  /* align-items: center; */
   gap: 2.5rem;
   font-family: var(--font-family-regular);
   font-weight: var(--font-weight);
   padding-right: 5.5rem;
   padding: 1rem;
   position: none;
+  display: none;
+  opacity: 0;
 }
 
 #menu-nav {
@@ -262,7 +264,7 @@ button {
   width: var(--pg-child-width);
   display: flex;
   justify-content: space-between;
-  padding: 0 4% 4% 0;
+  padding: 0 4% 0% 0;
   align-items: flex-end;
 }
 
@@ -300,12 +302,12 @@ button {
   border-radius: 7px;
 }
 
-/* #menu hr {
+#menu hr {
   height: 1px;
   color: var(--dark-details-line-bg-color);
   background-color: var(--dark-details-line-bg-color);
   margin-bottom: 20%;
-} */
+}
 
 #menu #menu-nav-options {
   font-size: 0.75rem;
@@ -314,6 +316,7 @@ button {
   gap: 1.5rem;
   align-items: flex-start;
   text-align: left;
+  justify-content: flex-start;
 }
 
 #menu-nav-options a {
@@ -337,6 +340,8 @@ button {
   font-family: var(--font-family-extra-light);
   font-weight: 100;
   color: var(--dark-text-color);
+  width: 75%;
+  margin: auto;
 }
 
 #main #home h1 span {
@@ -392,7 +397,6 @@ button {
 }
 
 #statistics-dashboard h2 {
-  /* font-family: "Montserrat-Black"; */
   font-weight: 900;
   line-height: 20px;
   font-size: 1.8rem;
@@ -819,8 +823,7 @@ footer > h3 {
   #nav {
     height: 7svh;
     width: var(--pg-width);
-    /* background-color: var(--dark-nav-bg-color); */
-    background-color: purple;
+    background-color: var(--dark-nav-bg-color);
     backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-between;
@@ -829,6 +832,7 @@ footer > h3 {
     padding-top: 10px;
     position: fixed;
     z-index: 88;
+    /* display: none; */
   }
 
   #brand-name {
@@ -878,7 +882,70 @@ footer > h3 {
   }
 
   #menu {
-    display: fixed;
+    position: fixed;
     top: -12%;
+    opacity: 1;
+    display: block;
+    right: -150%;
+  }
+
+  #half-ball {
+    height: 7%;
+    width: 90%;
+    left: -50%;
+    box-shadow: 80px 5px 190px 100px var(--dark-shadow-color);
+  }
+
+  #capsule-1 {
+    height: 15%;
+    width: 8%;
+    top: -8%;
+    left: 30%;
+    box-shadow: -50px 60px 90px 100px var(--dark-shadow-color);
+  }
+
+  #capsule-2 {
+    height: 10%;
+    width: 5%;
+    top: -3%;
+    right: 25%;
+    box-shadow: 50px -20px 70px 100px var(--dark-shadow-color);
+  }
+
+  #home {
+    padding: 13rem 0;
+    text-align: center;
+  }
+
+  #home h1 {
+    font-size: 3.6rem;
+    text-align: center;
+    line-height: 2.9rem;
+    font-family: var(--font-family-extra-light);
+    font-weight: 100;
+    width: 95%;
+  }
+
+  #home #floating-text {
+    display: none;
+  }
+
+  #statistics-dashboard {
+    height: 25%;
+    width: var(--pg-child-width);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 1rem;
+    margin: var(--margin-top) 0;
+    font-family: var(--primary-font-family-regular);
+  }
+
+  #statistics-dashboard h2 {
+    font-size: 1.5rem;
+  }
+
+  #statistics-dashboard h3 {
+    font-size: 1rem;
   }
 }
