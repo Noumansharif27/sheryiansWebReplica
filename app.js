@@ -1,19 +1,36 @@
-// let navSignInBtn = document.querySelector("#nav #sign-in");
-// let body = document.querySelector("#body");
+function theme() {
+  let body = document.querySelector("#body");
 
-// navSignInBtn.addEventListener("click", () => {
-//   body.classList.toggle("light");
-// });
+  function setTheme(mode) {
+    body.classList.remove("light", "dark"); // Remove existing classes
+    body.classList.add(mode); // Add the new class
+  }
 
-let body = document.querySelector("#body");
+  // Check for system preference (prefers-color-scheme)
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-function setTheme(mode) {
-  body.classList.remove("light", "dark"); // Remove existing classes
-  body.classList.add(mode); // Add the new class
+  // Apply initial theme based on system preference
+  setTheme(prefersDark ? "dark" : "light");
 }
 
-// Check for system preference (prefers-color-scheme)
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+theme();
 
-// Apply initial theme based on system preference
-setTheme(prefersDark ? "dark" : "light");
+let menuBar = document.querySelector("#menu");
+let menuButton = document.querySelector("#menu-nav-button");
+let navButton = document.querySelector("#nav-button");
+let isMenuOpen = 0;
+
+navButton.addEventListener("click", () => {
+  if (isMenuOpen === 0) {
+    menuBar.style.right = "0%";
+    isMenuOpen = 1;
+  }
+  console.log("hay");
+});
+
+menuButton.addEventListener("click", () => {
+  if (isMenuOpen === 1) {
+    menuBar.style.right = "-150%";
+    isMenuOpen = 0;
+  }
+});
