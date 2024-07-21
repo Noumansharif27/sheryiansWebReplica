@@ -18,11 +18,13 @@ theme();
 let menuBar = document.querySelector("#menu");
 let menuButton = document.querySelector("#menu-nav-button");
 let navButton = document.querySelector("#nav-button");
+let nav = document.querySelector("#nav");
 let isMenuOpen = 0;
 
 navButton.addEventListener("click", () => {
   if (isMenuOpen === 0) {
     menuBar.style.right = "0%";
+    nav.style.height = "0%";
     isMenuOpen = 1;
   }
   console.log("hay");

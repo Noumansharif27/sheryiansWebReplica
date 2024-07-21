@@ -18,31 +18,6 @@
   src: url(./fonts/HelveticaNowDisplay-Regular_5Mzhp8KlA8_CAVTbnsPOM.woff2);
 }
 
-@font-face {
-  font-family: "RobotoMono-SemiBold";
-  src: url(./fonts/RobotoMono-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: "RobotoMono-Bold";
-  src: url(./fonts/RobotoMono-Bold.ttf);
-}
-
-@font-face {
-  font-family: "RobotoMono-BoldItalic";
-  src: url(./fonts/RobotoMono-BoldItalic.ttf);
-}
-
-@font-face {
-  font-family: "Montserrat-Black";
-  src: url(./fonts/Montserrat-Black.ttf);
-}
-
-@font-face {
-  font-family: "Montserrat-SemiBold";
-  src: url(./fonts/Montserrat-SemiBold.ttf);
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -113,6 +88,7 @@ button {
   color: var(--dark-button-color);
   border: none;
   cursor: pointer;
+  /* overflow: auto; */
 }
 
 #main button {
@@ -188,6 +164,8 @@ button {
 #wraper {
   background-color: var(--dark-bg-color);
   backdrop-filter: blur(50px);
+  position: relative;
+  overflow: hidden;
 }
 
 #nav {
@@ -200,7 +178,7 @@ button {
   align-items: flex-end;
   padding-bottom: 10px;
   position: fixed;
-  z-index: 88;
+  z-index: 2;
 }
 
 #brand-name {
@@ -227,6 +205,7 @@ button {
   font-family: var(--font-family-regular);
   font-weight: var(--font-weight);
   padding-right: 5.5rem;
+  position: relative;
 }
 
 #nav-options h6 {
@@ -241,40 +220,73 @@ button {
   font-size: 0.9rem;
 }
 
+#nav #nav-button {
+  height: 12%;
+  width: 5%;
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.28rem;
+  z-index: 6;
+  position: fixed;
+  top: 10%;
+  /* right: 3%; */
+  background-color: white;
+}
+
+#nav #nav-button #line-1 {
+  height: 0.2rem;
+  width: 60%;
+  background-color: var(--dark-text-color);
+  border-radius: 7px;
+  z-index: 7;
+}
+
+#nav #nav-button #line-2 {
+  height: 0.2rem;
+  width: 60%;
+  background-color: var(--dark-text-color);
+  border-radius: 7px;
+  z-index: 7;
+}
+
 #menu {
-  height: var(--pg-child-height);
+  height: 120svh;
   width: var(--pg-width);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  /* align-items: center; */
+  /* align-items: flex-start; */
   gap: 2.5rem;
   font-family: var(--font-family-regular);
   font-weight: var(--font-weight);
+  background-color: var(--dark-button-color);
   padding-right: 5.5rem;
   padding: 1rem;
   position: fixed;
-  left: 0%;
-  z-index: 88;
-  backdrop-filter: blur(51px);
+  left: 150%;
+  bottom: 0%;
+  z-index: 5;
+  /* top: 90%; */
 }
 
 #menu-nav {
-  height: 20%;
+  height: 17%;
   width: var(--pg-child-width);
   display: flex;
   justify-content: space-between;
-  padding: 0 4% 0% 0;
+  padding-left: 4%;
   align-items: flex-end;
 }
 
 #menu #hero-heading {
   font-size: 2.5rem;
   font-weight: var(--font-weight);
-  margin-top: 1rem;
 }
 
-#menu-nav-button {
+/* #menu-nav-button {
   height: 2rem;
   width: 3rem;
   display: inline-block;
@@ -299,7 +311,7 @@ button {
   width: 60%;
   background-color: var(--dark-text-color);
   border-radius: 7px;
-}
+} */
 
 #menu hr {
   height: 1px;
@@ -316,6 +328,8 @@ button {
   align-items: flex-start;
   text-align: left;
   justify-content: flex-start;
+  opacity: 0.7;
+  font-family: var(--font-family-extra-light);
 }
 
 #menu-nav-options a {
@@ -456,7 +470,7 @@ button {
   padding: 5rem 4rem 0 3.8rem;
 }
 
-#main #page-3 #headline {
+#page-3 #headline {
   font-size: 2.5rem;
   font-family: var(--font-family-extra-light);
   letter-spacing: 1px;
@@ -820,7 +834,7 @@ footer > h3 {
   cursor: var(--cursor-default);
 }
 
-@media (max-width: 915px) {
+@media (max-width: 600px) {
   #nav {
     height: 7svh;
     width: var(--pg-width);
@@ -832,14 +846,14 @@ footer > h3 {
     align-items: flex-end;
     padding-top: 10px;
     position: fixed;
-    z-index: 88;
+    z-index: 2;
   }
 
   #brand-name {
     width: 8em;
     font-size: 1.05rem;
     font-weight: var(--font-weight);
-    padding-top: 15px;
+    /* padding-top: 15px; */
     padding-left: 4%;
     display: flex;
     align-items: center;
@@ -857,15 +871,19 @@ footer > h3 {
   }
 
   #nav #nav-button {
-    height: 2rem;
-    width: 3rem;
+    height: 2%;
+    width: 3%;
     display: inline-block;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.28rem;
-    z-index: 89;
+    z-index: 66;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    background-color: green;
   }
 
   #nav #nav-button #line-1 {
@@ -873,6 +891,7 @@ footer > h3 {
     width: 60%;
     background-color: var(--dark-text-color);
     border-radius: 7px;
+    z-index: 88;
   }
 
   #nav #nav-button #line-2 {
@@ -880,14 +899,15 @@ footer > h3 {
     width: 60%;
     background-color: var(--dark-text-color);
     border-radius: 7px;
+    z-index: 88;
   }
 
   #menu {
     position: fixed;
-    top: -12%;
+    top: -8%;
     opacity: 1;
     display: block;
-    /* right: -150%; */
+    right: -150%;
   }
 
   #half-ball {
@@ -916,8 +936,6 @@ footer > h3 {
   #home {
     padding: 11rem 0;
     text-align: center;
-    /* background-color: yellow; */
-    overflow: hidden;
   }
 
   #home h1 {
@@ -963,7 +981,8 @@ footer > h3 {
   #page-2 {
     height: 65svh;
     justify-content: space-between;
-    background-color: #4f4f4f;
+    /* background-color: #4f4f4f;
+    text-align: left; */
     overflow: hidden;
   }
 
@@ -996,11 +1015,32 @@ footer > h3 {
     width: 200svw;
     text-align: left;
     padding: 5rem 4rem 0 3.8rem;
-    overflow: auto;
-    background-color: #24cfa6;
+    /* background-color: #24cfa6; */
   }
 
-  #main #page-3::-webkit-scrollbar {
-    display: none;
+  #page-3 #headline {
+    font-size: 1.2rem;
+    font-family: var(--font-family-extra-light);
+    /* letter-spacing: 1px; */
+    font-weight: 100;
+    text-align: left;
   }
+
+  #courses-cards {
+    margin-top: 3rem;
+    height: 90%;
+    width: var(--pg-child-width);
+    display: flex;
+    justify-content: space-between;
+    color: var(--dark-text-color);
+  }
+
+  #main .card {
+    height: var(--pg-child-height);
+    width: 80%;
+    position: relative;
+  }
+  /* #main #page-3::-webkit-scrollbar {
+    display: none;
+  } */
 }
