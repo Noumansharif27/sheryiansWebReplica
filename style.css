@@ -496,7 +496,6 @@ button {
   height: 85%;
   width: var(--pg-child-width);
   border-radius: 20px;
-  overflow: hidden;
   background-color: var(--dark-card-bg-color);
 }
 
@@ -1011,8 +1010,7 @@ footer > h3 {
   }
 
   #main #page-3 {
-    height: var(--pg-height);
-    width: 200svw;
+    /* height: var(--pg-height); */
     text-align: left;
     padding: 5rem 4rem 0 3.8rem;
     /* background-color: #24cfa6; */
@@ -1028,18 +1026,109 @@ footer > h3 {
 
   #courses-cards {
     margin-top: 3rem;
-    height: 90%;
-    width: var(--pg-child-width);
+    height: 60%;
+    width: 250svw;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-evenly; */
     color: var(--dark-text-color);
+    overflow-x: auto;
   }
 
   #main .card {
     height: var(--pg-child-height);
-    width: 80%;
+    width: 35%;
     position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
   }
+
+  .course-card {
+    overflow-x: auto;
+    height: 45%;
+    overflow-y: hidden;
+    border-radius: 5px;
+  }
+
+  .purchase-btn {
+    height: 2.56rem;
+    bottom: 0.5rem;
+
+    border-radius: 5px;
+    font-size: 1.23rem;
+    font-weight: 700;
+  }
+
+  .card-main .card-details {
+    font-size: 0.75rem;
+    font-family: var(--font-family-extra-light);
+    padding-left: 1rem;
+    opacity: 0.6;
+    line-height: 1rem;
+  }
+
+  .card-main .card-heading {
+    font-size: 1.25rem;
+    font-family: var(--font-family-extra-light);
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.32rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+
+  .course-features .webD {
+    background-color: var(--dark-card-feature-el-bg-color);
+    width: 45%;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .course-features .anim {
+    width: 35%;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .course-features .design {
+    width: 30%;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+
+  .card-main .course-features {
+    padding: 1rem 0 0 1.75rem;
+  }
+
+  .card-main .tutor-pricing {
+    width: var(--pg-child-width);
+    height: 2.5rem;
+    background-color: var(--dark-card-feature-el-bg-color);
+    margin-top: 1rem;
+    text-align: left;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .tutor-pricing h3 span {
+    opacity: 0.6;
+    font-size: 0.79rem;
+    font-family: var(--font-family-extra-light);
+  }
+
+  .tutor-pricing h3 {
+    font-size: 0.89rem;
+    font-family: var(--font-family-extra-light);
+    font-weight: var(--font-weight);
+    color: var(--dark-text-color);
+    opacity: 1;
+  }
+
   /* #main #page-3::-webkit-scrollbar {
     display: none;
   } */
