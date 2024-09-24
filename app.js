@@ -1,38 +1,28 @@
-function theme() {
-  let body = document.querySelector("#body");
+const express = require("express");
+const mongoose = require("mongoose");
+const path = require("path");
+const ejsMate = require("ejs-mate");
 
-  function setTheme(mode) {
-    body.classList.remove("light", "dark"); // Remove existing classes
-    body.classList.add(mode); // Add the new class
-  }
+const app = express();
+const port = 3000;
 
-  // Check for system preference (prefers-color-scheme)
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
-  // Apply initial theme based on system preference
-  setTheme(prefersDark ? "dark" : "light");
-}
+app.engine("ejs", ejsMate);
 
-theme();
-
-let menuBar = document.querySelector("#menu");
-let menuButton = document.querySelector("#menu-nav-button");
-let navButton = document.querySelector("#nav-button");
-let nav = document.querySelector("#nav");
-let isMenuOpen = 0;
-
-navButton.addEventListener("click", () => {
-  if (isMenuOpen === 0) {
-    menuBar.style.right = "0%";
-    nav.style.height = "0%";
-    isMenuOpen = 1;
-  }
-  console.log("hay");
+// Root Rought
+app.get("/", (req, res) => {
+  res.send("welcome to root!");
 });
 
-menuButton.addEventListener("click", () => {
-  if (isMenuOpen === 1) {
-    menuBar.style.right = "-150%";
-    isMenuOpen = 0;
-  }
+app.get("/sheryians", (req, res) => {
+  res.render("index.ejs");
+});
+
+// Server Started
+app.listen(port, () => {
+  console.log(`listing at port: ${port}`);
 });
