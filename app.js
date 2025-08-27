@@ -15,7 +15,7 @@ app.engine("ejs", ejsMate);
 
 // Root Rought
 app.get("/", (req, res) => {
-  res.send("welcome to root!");
+  res.render("index.ejs");
 });
 
 app.get("/sheryians", (req, res) => {
